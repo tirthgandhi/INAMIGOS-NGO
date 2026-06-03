@@ -1,0 +1,83 @@
+{
+  "source": "manifest",
+  "generatedAt": "2026-06-02T00:00:00Z",
+  "projects": {
+    "bachpanshala": {
+      "id": "bachpanshala",
+      "folder": "assets/images/projects/bachpanshala",
+      "images": [
+        "assets/images/projects/bachpanshala/img1.jpg",
+        "assets/images/projects/bachpanshala/img2.jpg",
+        "assets/images/projects/bachpanshala/img3.jpg",
+        "assets/images/projects/bachpanshala/img4.jpg",
+        "assets/images/projects/bachpanshala/img5.jpg"
+      ],
+      "cover": "assets/images/projects/bachpanshala/img1.jpg"
+    },
+    "seva": {
+      "id": "seva",
+      "folder": "assets/images/projects/seva",
+      "images": [
+        "assets/images/projects/seva/img1.jpg",
+        "assets/images/projects/seva/img2.jpg",
+        "assets/images/projects/seva/img3.jpg",
+        "assets/images/projects/seva/img4.jpg",
+        "assets/images/projects/seva/img5.jpg",
+        "assets/images/projects/seva/img6.jpg"
+      ],
+      "cover": "assets/images/projects/seva/img1.jpg"
+    },
+    "udaan": {
+      "id": "udaan",
+      "folder": "assets/images/projects/udaan",
+      "images": [
+        "assets/images/projects/udaan/img1.jpg",
+        "assets/images/projects/udaan/img2.jpg",
+        "assets/images/projects/udaan/img3.jpg",
+        "assets/images/projects/udaan/img4.jpg",
+        "assets/images/projects/udaan/img5.jpg",
+        "assets/images/projects/udaan/img6.jpg",
+        "assets/images/projects/udaan/img7.jpg",
+        "assets/images/projects/udaan/img8.jpg"
+      ],
+      "cover": "assets/images/projects/udaan/img1.jpg"
+    },
+    "jeev": {
+      "id": "jeev",
+      "folder": "assets/images/projects/jeev",
+      "images": [
+        "assets/images/projects/jeev/img1.jpg",
+        "assets/images/projects/jeev/img2.jpg",
+        "assets/images/projects/jeev/img3.jpg",
+        "assets/images/projects/jeev/img4.jpg"
+      ],
+      "cover": "assets/images/projects/jeev/img1.jpg"
+    },
+    "prakriti": {
+      "id": "prakriti",
+      "folder": "assets/images/projects/prakriti",
+      "images": [
+        "assets/images/projects/prakriti/img1.jpg",
+        "assets/images/projects/prakriti/img2.jpg",
+        "assets/images/projects/prakriti/img3.jpg",
+        "assets/images/projects/prakriti/img4.jpg",
+        "assets/images/projects/prakriti/img5.jpg"
+      ],
+      "cover": "assets/images/projects/prakriti/img1.jpg"
+    },
+    "vikas": {
+      "id": "vikas",
+      "folder": "assets/images/projects/vikas",
+      "images": [
+        "assets/images/projects/vikas/img1.jpg",
+        "assets/images/projects/vikas/img2.jpg",
+        "assets/images/projects/vikas/img3.jpg",
+        "assets/images/projects/vikas/img4.jpg",
+        "assets/images/projects/vikas/img5.jpg",
+        "assets/images/projects/vikas/img6.png",
+        "assets/images/projects/vikas/img7.jpg"
+      ],
+      "cover": "assets/images/projects/vikas/img1.jpg"
+    }
+  }
+}

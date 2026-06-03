@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - InAmigos Foundation</title>
+  <meta name="description" content="Explore the visual journey of InAmigos Foundation's impact across India through our project galleries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/website-sections.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-website">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="home.html" class="brand" aria-label="InAmigos Foundation">
+        <img src="assets/logos/inamigos-logo.svg" alt="" width="36" height="36" class="brand-mark" onerror="this.remove()">
+        <span class="brand-name">InAmigos <span>Foundation</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn-donate" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="nav-mobile">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <!-- Gallery Hero -->
+    <section class="page-hero">
+      <div class="page-hero__content">
+        <h1 class="page-title" id="gallery-title">Our Gallery</h1>
+        <p class="page-subtitle" id="gallery-subtitle">Visual stories of impact across India</p>
+      </div>
+    </section>
+
+    <!-- Debug Info (remove in production) -->
+    <section class="section" style="background: #1f2937; padding: 1rem;">
+      <div class="section-inner">
+        <details>
+          <summary style="color: #d4a373; cursor: pointer; font-weight: bold;">🔧 Debug Information (Click to expand)</summary>
+          <div style="margin: 1rem 0;">
+            <button onclick="testSingleImage()" style="background: #d4a373; color: #0b1120; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-right: 1rem;">Test Single Image</button>
+            <button onclick="clearDebug()" style="background: #374151; color: white; border: 1px solid #6b7280; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Clear Debug</button>
+          </div>
+          <div id="debug-info" style="background: #374151; padding: 1rem; border-radius: 6px; font-family: monospace; font-size: 12px; color: #e5e7eb; max-height: 200px; overflow-y: auto;"></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Project Selection -->
+    <section class="section" id="project-selector">
+      <div class="section-inner">
+        <div class="project-tabs">
+          <button class="project-tab active" data-project="all">All Projects</button>
+          <button class="project-tab" data-project="bachpanshala">Bachpanshala</button>
+          <button class="project-tab" data-project="seva">Seva</button>
+          <button class="project-tab" data-project="udaan">Udaan</button>
+          <button class="project-tab" data-project="jeev">Jeev</button>
+          <button class="project-tab" data-project="prakriti">Prakriti</button>
+          <button class="project-tab" data-project="vikas">Vikas</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Content -->
+    <section class="section section--alt" id="gallery-content">
+      <div class="section-inner">
+        <div class="gallery-grid" id="gallery-grid"></div>
+        <div class="gallery-empty" id="gallery-empty" style="display: none;">
+          <p>Select a project above to view its gallery.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">InAmigos <span>Foundation</span></span>
+        <p style="color:var(--accent-gold);font-size:0.85rem;margin-top:0.35rem">Uniting Minds For Change</p>
+        <p>Section 8 NGO licensed by the Central Government. Creating lasting impact across India since 2020.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/InAmigos/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/InAmigosF" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+          <a href="https://www.instagram.com/inamigos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/company/inamigos-foundation" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+        <p class="footer-legal">CIN: U85300CT2020NPL010641 · PAN: AAFCI8183C<br>Bilaspur, Chhattisgarh, India — 495555</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Projects</h4>
+        <ul>
+          <li><a href="projects/seva.html">Project Seva</a></li>
+          <li><a href="projects/bachpanshala.html">Project Bachpanshala</a></li>
+          <li><a href="projects/jeev.html">Project Jeev</a></li>
+          <li><a href="projects/udaan.html">Project Udaan</a></li>
+          <li><a href="projects/prakriti.html">Project Prakriti</a></li>
+          <li><a href="projects/vikas.html">Project Vikas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a></li>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Volunteer</a></li>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Internships</a></li>
+          <li><a href="mailto:info@inamigosfoundation.org.in">info@inamigosfoundation.org.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 InAmigos Foundation. All Rights Reserved. · Developed with purpose for social impact.</p>
+    </div>
+  </footer>
+
+  <script src="js/project-images.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script>
+    // Simplified Gallery Implementation
+    (function() {
+      'use strict';
+      
+      const PROJECT_NAMES = {
+        bachpanshala: 'Project Bachpanshala',
+        seva: 'Project Seva',
+        udaan: 'Project Udaan', 
+        jeev: 'Project Jeev',
+        prakriti: 'Project Prakriti',
+        vikas: 'Project Vikas'
+      };
+
+      // Direct project images data - matching our folder structure
+      const PROJECT_IMAGES = {
+        bachpanshala: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg'],
+        seva: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'],
+        udaan: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg', 'img7.jpg', 'img8.jpg'],
+        jeev: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg'],
+        prakriti: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg'],
+        vikas: ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.png', 'img7.jpg']
+      };
+
+      let currentProject = 'all';
+
+      function debugLog(message) {
+        const timestamp = new Date().toLocaleTimeString();
+        const logMessage = `[${timestamp}] ${message}`;
+        console.log('[Gallery]', timestamp, message);
+        
+        const debugDiv = document.getElementById('debug-info');
+        if (debugDiv) {
+          debugDiv.innerHTML += logMessage + '<br>';
+          debugDiv.scrollTop = debugDiv.scrollHeight;
+        }
+      }
+
+      function getUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('project') || 'all';
+      }
+
+      function updateTitle(project) {
+        const title = document.getElementById('gallery-title');
+        const subtitle = document.getElementById('gallery-subtitle');
+        
+        if (title && subtitle) {
+          if (project === 'all') {
+            title.textContent = 'Our Gallery';
+            subtitle.textContent = 'Visual stories of impact across India';
+          } else {
+            title.textContent = PROJECT_NAMES[project] || 'Project Gallery';
+            subtitle.textContent = `Visual stories from ${PROJECT_NAMES[project] || project}`;
+          }
+        }
+      }
+
+      function updateActiveTab(project) {
+        document.querySelectorAll('.project-tab').forEach(tab => {
+          tab.classList.toggle('active', tab.getAttribute('data-project') === project);
+        });
+      }
+
+      function createImagePath(projectId, filename) {
+        return `assets/images/projects/${projectId}/${filename}`;
+      }
+
+      function createGalleryTile(src, alt, projectId, index) {
+        debugLog(`Creating tile for: ${src}`);
+        
+        return `
+          <button type="button" class="gallery-tile" data-lightbox data-src="${src}" data-alt="${alt}" data-project="${projectId}" data-index="${index}" style="animation-delay: ${(index * 0.1)}s">
+            <img src="${src}" alt="${alt}" width="400" height="300" 
+                 onload="console.log('✓ Gallery image loaded:', this.src)" 
+                 onerror="console.log('✗ Gallery image failed:', this.src); this.style.background='#374151'; this.alt='Image failed to load';">
+            <span class="gallery-tile__shade"></span>
+          </button>`;
+      }
+
+      function loadGallery(project) {
+        debugLog(`Loading gallery for project: ${project}`);
+        
+        const grid = document.getElementById('gallery-grid');
+        const empty = document.getElementById('gallery-empty');
+        
+        if (!grid || !empty) {
+          debugLog('Error: Gallery elements not found');
+          return;
+        }
+
+        // Show loading
+        grid.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 1.1rem;">Loading images...</div>';
+        grid.style.display = 'block';
+        empty.style.display = 'none';
+
+        setTimeout(() => {
+          try {
+            let allTiles = [];
+            
+            if (project === 'all') {
+              // Load all project images
+              let tileIndex = 0;
+              Object.keys(PROJECT_IMAGES).forEach(projectId => {
+                const images = PROJECT_IMAGES[projectId];
+                debugLog(`Loading ${images.length} images for project ${projectId}`);
+                images.forEach(filename => {
+                  const src = createImagePath(projectId, filename);
+                  const alt = `${PROJECT_NAMES[projectId]} — photo ${filename}`;
+                  debugLog(`Adding image: ${src}`);
+                  allTiles.push(createGalleryTile(src, alt, projectId, tileIndex++));
+                });
+              });
+              
+            } else {
+              // Load specific project images
+              if (PROJECT_IMAGES[project]) {
+                PROJECT_IMAGES[project].forEach((filename, i) => {
+                  const src = createImagePath(project, filename);
+                  const alt = `${PROJECT_NAMES[project]} — photo ${filename}`;
+                  allTiles.push(createGalleryTile(src, alt, project, i));
+                });
+              }
+            }
+
+            if (allTiles.length === 0) {
+              empty.innerHTML = `<p>No images found for ${project === 'all' ? 'any projects' : PROJECT_NAMES[project] || project}.</p>`;
+              empty.style.display = 'block';
+              grid.style.display = 'none';
+              debugLog('No images to display');
+              return;
+            }
+
+            grid.innerHTML = allTiles.join('');
+            grid.style.display = 'grid';
+            empty.style.display = 'none';
+            
+            debugLog(`Successfully loaded ${allTiles.length} images`);
+            
+            // Initialize lightbox after a short delay
+            setTimeout(initSimpleLightbox, 100);
+            
+          } catch (error) {
+            debugLog(`Error loading gallery: ${error.message}`);
+            empty.innerHTML = `<p>Error loading gallery: ${error.message}</p>`;
+            empty.style.display = 'block';
+            grid.style.display = 'none';
+          }
+        }, 300); // Short delay to show loading state
+      }
+
+      function initSimpleLightbox() {
+        // Simple lightbox implementation
+        let lightbox = document.getElementById('simple-lightbox');
+        if (!lightbox) {
+          lightbox = document.createElement('div');
+          lightbox.id = 'simple-lightbox';
+          lightbox.innerHTML = `
+            <div class="lightbox-backdrop"></div>
+            <div class="lightbox-content">
+              <button class="lightbox-close">&times;</button>
+              <img class="lightbox-img" src="" alt="">
+              <button class="lightbox-prev">‹</button>
+              <button class="lightbox-next">›</button>
+              <div class="lightbox-caption"></div>
+            </div>
+          `;
+          lightbox.style.cssText = `
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+            background: rgba(0,0,0,0.9); z-index: 9999; display: none;
+            align-items: center; justify-content: center;
+          `;
+          
+          const style = document.createElement('style');
+          style.textContent = `
+            #simple-lightbox .lightbox-content { position: relative; max-width: 90%; max-height: 90%; }
+            #simple-lightbox .lightbox-img { max-width: 100%; max-height: 80vh; object-fit: contain; }
+            #simple-lightbox .lightbox-close { position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer; }
+            #simple-lightbox .lightbox-prev, #simple-lightbox .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 2rem; padding: 10px 15px; cursor: pointer; }
+            #simple-lightbox .lightbox-prev { left: -60px; }
+            #simple-lightbox .lightbox-next { right: -60px; }
+            #simple-lightbox .lightbox-caption { text-align: center; color: white; margin-top: 10px; }
+          `;
+          document.head.appendChild(style);
+          document.body.appendChild(lightbox);
+          
+          // Add event listeners
+          lightbox.querySelector('.lightbox-close').addEventListener('click', () => {
+            lightbox.style.display = 'none';
+          });
+          
+          lightbox.querySelector('.lightbox-backdrop').addEventListener('click', () => {
+            lightbox.style.display = 'none';
+          });
+        }
+
+        // Add click handlers to gallery tiles
+        document.querySelectorAll('[data-lightbox]').forEach(tile => {
+          tile.addEventListener('click', (e) => {
+            e.preventDefault();
+            const img = lightbox.querySelector('.lightbox-img');
+            const caption = lightbox.querySelector('.lightbox-caption');
+            
+            img.src = tile.getAttribute('data-src') || tile.querySelector('img').src;
+            img.alt = tile.getAttribute('data-alt') || tile.querySelector('img').alt;
+            caption.textContent = img.alt;
+            
+            lightbox.style.display = 'flex';
+            debugLog('Lightbox opened for: ' + img.src);
+          });
+        });
+      }
+
+      function init() {
+        debugLog('Initializing gallery...');
+        
+        currentProject = getUrlParams();
+        updateTitle(currentProject);
+        updateActiveTab(currentProject);
+        
+        // Add click handlers to tabs
+        document.querySelectorAll('.project-tab').forEach(tab => {
+          tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            const project = tab.getAttribute('data-project');
+            currentProject = project;
+            
+            debugLog(`Switching to project: ${project}`);
+            
+            // Update URL
+            const url = new URL(window.location);
+            if (project === 'all') {
+              url.searchParams.delete('project');
+            } else {
+              url.searchParams.set('project', project);
+            }
+            window.history.pushState({}, '', url);
+            
+            updateTitle(project);
+            updateActiveTab(project);
+            loadGallery(project);
+          });
+        });
+
+        // Load initial gallery
+        loadGallery(currentProject);
+      }
+
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
+      
+      debugLog('Gallery script loaded');
+      
+      // Debug functions (remove in production)
+      window.testSingleImage = function() {
+        debugLog('Testing single image load...');
+        const testImg = new Image();
+        testImg.onload = () => debugLog('✓ Test image loaded successfully: assets/images/projects/bachpanshala/img1.jpg');
+        testImg.onerror = () => debugLog('✗ Test image failed to load: assets/images/projects/bachpanshala/img1.jpg');
+        testImg.src = 'assets/images/projects/bachpanshala/img1.jpg';
+        
+        // Also test the path resolution
+        debugLog('Current page URL: ' + window.location.href);
+        debugLog('Testing image path: ' + new URL('assets/images/projects/bachpanshala/img1.jpg', window.location.href));
+      };
+      
+      window.clearDebug = function() {
+        const debugDiv = document.getElementById('debug-info');
+        if (debugDiv) debugDiv.innerHTML = '';
+      };
+    })();
+  </script>
+</body>
+</html>

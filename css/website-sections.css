@@ -1,0 +1,991 @@
+/* Extended main-site sections — full NGO content layout */
+
+.site-banner {
+  position: relative;
+  min-height: 52vh;
+  min-height: 52dvh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.site-banner .hero-body {
+  min-height: 52vh;
+  min-height: 52dvh;
+  padding-bottom: 3rem;
+  align-items: flex-end;
+}
+
+.site-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.site-banner__actions .btn-primary,
+.site-banner__actions .btn-outline {
+  min-width: 160px;
+  text-align: center;
+}
+
+/* About — mission / vision blocks */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.pillar-card {
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-top: 3px solid var(--accent-gold);
+}
+
+.pillar-card h3 {
+  font-family: "Poppins", var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.04em;
+}
+
+.pillar-card p {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.about-story {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.credential-badge {
+  padding: 1rem 1.1rem;
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(212, 163, 115, 0.15);
+  border-radius: 10px;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.45;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.credential-badge:hover {
+  border-color: rgba(132, 204, 22, 0.35);
+  background: rgba(31, 41, 55, 0.9);
+}
+
+.credential-badge::before {
+  content: "✓";
+  display: block;
+  color: var(--accent-green);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  font-size: 0.75rem;
+}
+
+/* Impact Cards - Simple Hover Animation (No Flip) + Clickable */
+.impact-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.impact-card {
+  position: relative;
+  height: 200px;
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.impact-card__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    var(--accent-gold), 
+    var(--accent-green), 
+    #D4A373, 
+    var(--accent-green), 
+    var(--accent-gold)
+  );
+  background-size: 400% 400%;
+  animation: gradientRotate 4s ease-in-out infinite;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+@keyframes gradientRotate {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.impact-card__content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(11, 17, 32, 0.95) 0%, 
+    rgba(31, 41, 55, 0.95) 100%
+  );
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.impact-card__number {
+  font-family: "Poppins", var(--font-body);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 10px rgba(212, 163, 115, 0.3);
+  transition: all 0.3s ease;
+}
+
+.impact-card__title {
+  font-family: "Inter", var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.impact-card__description {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease 0.1s;
+}
+
+/* Simple Hover Effects - No Flip */
+.impact-cards-container:hover .impact-card:not(:hover) {
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.impact-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  z-index: 10;
+}
+
+.impact-card:hover .impact-card__border {
+  animation-duration: 2s;
+  opacity: 1;
+  box-shadow: 0 15px 40px rgba(212, 163, 115, 0.4);
+}
+
+.impact-card:hover .impact-card__content {
+  border: 1px solid rgba(212, 163, 115, 0.3);
+  box-shadow: 0 15px 40px rgba(212, 163, 115, 0.2);
+}
+
+.impact-card:hover .impact-card__number {
+  transform: scale(1.1);
+  text-shadow: 0 4px 20px rgba(212, 163, 115, 0.5);
+}
+
+.impact-card:hover .impact-card__description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .impact-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .impact-card {
+    height: 180px;
+  }
+  
+  .impact-card__number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-cards-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .impact-card {
+    height: 160px;
+  }
+  
+  .impact-card__number {
+    font-size: 2rem;
+  }
+  
+  .impact-card__title {
+    font-size: 0.9rem;
+  }
+  
+  .impact-card__description {
+    font-size: 0.8rem;
+  }
+  
+  /* Simplify hover effects on mobile */
+  .impact-cards-container:hover .impact-card:not(:hover) {
+    transform: none;
+    opacity: 1;
+  }
+  
+  .impact-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* Touch devices - tap to show description */
+@media (hover: none) and (pointer: coarse) {
+  .impact-card__description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .impact-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .impact-cards-container:hover .impact-card:not(:hover) {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Extended Impact Stats Grid */
+.extended-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0 2rem;
+}
+
+.impact-stat-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.3s ease;
+}
+
+.impact-stat-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 163, 115, 0.2);
+  box-shadow: 0 8px 25px rgba(212, 163, 115, 0.1);
+}
+
+.impact-stat-number {
+  font-family: "Poppins", var(--font-body);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.impact-stat-label {
+  font-family: "Inter", var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.impact-stat-desc {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .extended-impact-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .impact-stat-item {
+    padding: 1.5rem 1rem;
+  }
+  
+  .impact-stat-number {
+    font-size: 1.75rem;
+  }
+}
+
+/* Page Hero Styles */
+.page-hero {
+  position: relative;
+  min-height: 35vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  margin-top: var(--nav-height);
+  padding-top: 2rem;
+}
+
+.page-hero__content {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.page-title {
+  font-family: "Cormorant Garamond", var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  font-family: "Inter", var(--font-body);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Ensure all page sections start below the navbar */
+.page-website main {
+  padding-top: 0;
+}
+
+.page-website .section:first-child {
+  margin-top: 0;
+}
+
+/* Fix for pages without hero section */
+.page-website main > .section:first-child:not(.page-hero) {
+  margin-top: var(--nav-height);
+  padding-top: 2rem;
+}
+
+/* Gallery Project Tabs */
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.project-tab {
+  padding: 0.75rem 1.5rem;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 25px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-tab:hover {
+  background: rgba(212, 163, 115, 0.1);
+  border-color: rgba(212, 163, 115, 0.3);
+  color: var(--accent-gold);
+}
+
+.project-tab.active {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-green));
+  border-color: transparent;
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid .gallery-tile {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.gallery-grid .gallery-tile:hover {
+  transform: translateY(-2px);
+}
+
+/* Navigation active state */
+.nav-desktop a.active,
+.nav-mobile a.active {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Call to Action Section */
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cta-actions .btn-primary,
+.cta-actions .btn-outline {
+  min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Original impact stats styles for reference - remove if not needed elsewhere */
+.impact-stats-grid--wide {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.impact-highlight {
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(212, 163, 115, 0.08), rgba(132, 204, 22, 0.05));
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.impact-highlight p {
+  font-family: "Inter", var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* COVID relief */
+.relief-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.relief-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.15rem;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border-left: 3px solid var(--accent-green);
+}
+
+.relief-item__year {
+  font-family: "Poppins", var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.relief-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Volunteer */
+.involvement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.involvement-card {
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: border-color 0.35s ease, transform 0.35s var(--ease-out);
+}
+
+.involvement-card:hover {
+  border-color: rgba(212, 163, 115, 0.3);
+  transform: translateY(-4px);
+}
+
+.involvement-card h3 {
+  font-family: "Poppins", var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.involvement-card p {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.internship-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.internship-role {
+  padding: 0.5rem 0.9rem;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--bg-card);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 999px;
+  color: var(--text-muted);
+}
+
+.certificate-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem 1.5rem;
+}
+
+.certificate-benefits li {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.55;
+}
+
+.certificate-benefits li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+/* Success Stories Grid - New Layout */
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.story-card {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  min-height: 280px;
+}
+
+.story-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(45deg, 
+    transparent,
+    rgba(212, 163, 115, 0.3), 
+    rgba(132, 204, 22, 0.2), 
+    rgba(212, 163, 115, 0.3),
+    transparent
+  );
+  background-size: 400% 400%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: gradientRotate 4s ease-in-out infinite;
+}
+
+.story-card__content {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  border-radius: 14px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.story-title {
+  font-family: "Poppins", var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+  flex-shrink: 0;
+}
+
+.story-project {
+  display: inline-block;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-green);
+  background: rgba(132, 204, 22, 0.1);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  align-self: flex-start;
+  border: 1px solid rgba(132, 204, 22, 0.2);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.story-summary {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  flex: 1;
+}
+
+.story-read-more {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+/* Hover Effects - Uiverse Style Adaptation */
+.stories-grid:hover .story-card:not(:hover) {
+  filter: blur(2px);
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.story-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  z-index: 10;
+}
+
+.story-card:hover::before {
+  opacity: 1;
+  animation-duration: 2s;
+}
+
+.story-card:hover .story-card__content {
+  box-shadow: 0 20px 50px rgba(212, 163, 115, 0.2);
+}
+
+.story-card:hover .story-project {
+  background: rgba(132, 204, 22, 0.15);
+  border-color: rgba(132, 204, 22, 0.3);
+  color: var(--accent-green);
+}
+
+.story-card:hover .story-read-more {
+  color: var(--accent-gold);
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .story-card {
+    min-height: 240px;
+  }
+  
+  .story-card__content {
+    padding: 1.5rem;
+  }
+  
+  .story-title {
+    font-size: 1.1rem;
+  }
+  
+  .story-summary {
+    font-size: 0.9rem;
+  }
+  
+  /* Simplify hover effects on mobile */
+  .stories-grid:hover .story-card:not(:hover) {
+    filter: none;
+    transform: none;
+    opacity: 1;
+  }
+  
+  .story-card:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* Touch devices - remove blur effects */
+@media (hover: none) and (pointer: coarse) {
+  .stories-grid:hover .story-card:not(:hover) {
+    filter: none;
+    transform: none;
+    opacity: 1;
+  }
+  
+  .story-card {
+    transition: transform 0.3s ease;
+  }
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.contact-card {
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.contact-card h3 {
+  font-family: "Poppins", var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 0.85rem;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.contact-list a {
+  color: var(--text-primary);
+  transition: color 0.25s ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent-gold);
+}
+
+.contact-list strong {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-green);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.social-connect {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.social-connect a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(11, 17, 32, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  font-family: "Inter", var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.social-connect a:hover {
+  border-color: var(--accent-gold);
+  color: var(--text-primary);
+}
+
+.footer-legal {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+.project-card__objectives {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+.project-card__objectives li {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0 0.25rem 0.85rem;
+  position: relative;
+  line-height: 1.45;
+}
+
+.project-card__objectives li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent-green);
+}
+
+.project-card__description {
+  font-family: "Inter", var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 0.65rem;
+}
+
+@media (max-width: 1024px) {
+  .about-pillars,
+  .credentials-grid,
+  .involvement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats-grid--wide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .relief-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats-grid--wide {
+    grid-template-columns: 1fr;
+  }
+}

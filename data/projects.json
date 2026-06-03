@@ -1,0 +1,154 @@
+{
+  "projects": [
+    {
+      "id": "bachpanshala",
+      "name": "Project Bachpanshala",
+      "tagline": "Nurturing Young Minds, Building Bright Futures",
+      "location": "Bilaspur, Chhattisgarh & Rural India",
+      "mission": "To unlock every child's right to learn through books, mentorship, and community-led classrooms in underserved villages.",
+      "description": "Project Bachpanshala ensures quality education for underprivileged children through book distribution, volunteer teaching, and learning support in underserved communities.",
+      "objectives": [
+        "Provide access to books and learning materials",
+        "Deploy volunteer teachers in rural areas",
+        "Support holistic childhood development"
+      ],
+      "imageFolder": "bachpanshala",
+      "imageFallback": "https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "500+ Children Educated",
+        "Book distribution drives across villages",
+        "Volunteer-led classroom sessions"
+      ],
+      "successStory": {
+        "title": "Education Opens Doors in Rural Chhattisgarh",
+        "body": "A child who could not attend school due to poverty received books and volunteer teaching through Project Bachpanshala. Today, with sustained mentorship, she is pursuing her dream of becoming a teacher and helping others in her village learn to read.",
+        "quote": "InAmigos gave me hope when I had none. Now I want to give others that same opportunity."
+      }
+    },
+    {
+      "id": "seva",
+      "name": "Project Seva",
+      "tagline": "Serving Humanity with Compassion",
+      "location": "Pan India",
+      "mission": "To serve vulnerable families with dignity through nutritious meals, clothing, and relief when they need it most.",
+      "description": "Project Seva provides food and clothing to the underprivileged — distributing meals and essentials to families in slums, orphanages, and low-income communities.",
+      "objectives": [
+        "Organize food distribution drives",
+        "Supply clothing and daily essentials",
+        "Reach vulnerable families during crises"
+      ],
+      "imageFolder": "seva",
+      "imageFallback": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "50,000+ Meals Distributed",
+        "Food drives in slums & orphanages",
+        "Relief support across multiple states"
+      ],
+      "successStory": {
+        "title": "Meals That Restored Dignity",
+        "body": "During a Project Seva food drive in a low-income neighbourhood, families received nutritious meals and essential supplies. Volunteers documented how consistent support helped parents focus on work while children returned to school with full stomachs and renewed confidence.",
+        "quote": "When someone cares enough to feed your family, you find strength to rebuild."
+      }
+    },
+    {
+      "id": "udaan",
+      "name": "Project Udaan",
+      "tagline": "Soaring Towards a Brighter Future",
+      "location": "Pan India",
+      "mission": "To empower women and girls with skills, digital literacy, and confidence to build independent futures.",
+      "description": "Project Udaan advances women empowerment through skill development, digital literacy, and pathways to financial independence for women and girls.",
+      "objectives": [
+        "Deliver digital literacy and skill training",
+        "Empower women toward self-reliance",
+        "Run awareness campaigns for girls in science & leadership"
+      ],
+      "imageFolder": "udaan",
+      "imageFallback": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "900+ Girls Empowered",
+        "Skill development workshops",
+        "Financial independence initiatives"
+      ],
+      "successStory": {
+        "title": "Digital Skills, Independent Futures",
+        "body": "Through Project Udaan's digital literacy program, a young woman learned online business skills and now earns a steady income supporting her family — demonstrating how women empowerment creates ripple effects across entire households.",
+        "quote": "Digital literacy changed my life. Now I am independent and confident."
+      }
+    },
+    {
+      "id": "jeev",
+      "name": "Project Jeev",
+      "tagline": "Empowering Lives, Spreading Compassion",
+      "location": "Bilaspur & Surrounding Regions",
+      "mission": "To protect and care for every stray and abandoned animal through daily feeding, rescue, and community compassion.",
+      "description": "Project Jeev leads animal welfare efforts including rescue, protection, daily feeding, and medical care for stray and abandoned animals.",
+      "objectives": [
+        "Feed and care for street animals daily",
+        "Support rescue and shelter partnerships",
+        "Promote compassion for all living beings"
+      ],
+      "imageFolder": "jeev",
+      "imageFallback": "https://images.unsplash.com/photo-1548199973-03cce0bbc87a?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "50+ Animals Fed Daily",
+        "Rescue & welfare drives",
+        "Community awareness on animal rights"
+      ],
+      "successStory": {
+        "title": "Compassion for Every Life",
+        "body": "Project Jeev volunteers feed and care for stray animals daily. Community members now report injured animals for rescue, reflecting a cultural shift toward empathy nurtured through consistent welfare work.",
+        "quote": "Every creature deserves care — Jeev taught our children that lesson."
+      }
+    },
+    {
+      "id": "prakriti",
+      "name": "Project Prakriti",
+      "tagline": "Plant for a Better Tomorrow",
+      "location": "Pan India",
+      "mission": "To restore green cover and inspire communities to live sustainably through plantation, cleanliness, and plastic-free action.",
+      "description": "Project Prakriti drives environmental conservation through tree plantation, cleanliness drives, plastic-free campaigns, and sustainability awareness.",
+      "objectives": [
+        "Plant trees and restore green cover",
+        "Conduct cleanliness and plastic-free drives",
+        "Educate communities on environmental stewardship"
+      ],
+      "imageFolder": "prakriti",
+      "imageFallback": "https://images.unsplash.com/photo-1464226189744-aa900bbe673f?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "20,000+ Trees Planted",
+        "Cleanliness drives nationwide",
+        "Plastic-free community campaigns"
+      ],
+      "successStory": {
+        "title": "From Wasteland to Green Community",
+        "body": "Project Prakriti's tree plantation initiative transformed degraded land in a Maharashtra village. Local residents joined cleanliness drives and now maintain green spaces that improve air quality and create livelihood opportunities.",
+        "quote": "Our village now has clean air and income from the trees we planted together."
+      }
+    },
+    {
+      "id": "vikas",
+      "name": "Project Vikas",
+      "tagline": "Building Future Leaders",
+      "location": "Pan India",
+      "mission": "To prepare youth for meaningful careers through internships, mentorship, and real-world social impact experience.",
+      "description": "Project Vikas enhances employability through internship programs, skill-building workshops, and career readiness for youth across India.",
+      "objectives": [
+        "Offer 1–3 month internship opportunities",
+        "Build professional and life skills",
+        "Connect youth with employment pathways"
+      ],
+      "imageFolder": "vikas",
+      "imageFallback": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+      "impactStats": [
+        "1 Lakh+ Interns Onboarded",
+        "250+ interns joined permanently",
+        "Ranked Top Employer on Internshala (5+ years)"
+      ],
+      "successStory": {
+        "title": "Internship to Employment",
+        "body": "A Project Vikas intern gained hands-on experience in community management and social work. The ISO-certified certificate and mentorship led to a full-time role — one of 250+ interns who joined the InAmigos team permanently.",
+        "quote": "Vikas was not just an internship — it was my pathway to meaningful work."
+      }
+    }
+  ]
+}

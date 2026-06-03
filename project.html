@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting…</title>
+  <script>
+    (function () {
+      var id = (new URLSearchParams(location.search).get("id") || "").toLowerCase();
+      var allowed = ["bachpanshala", "seva", "udaan", "jeev", "prakriti", "vikas"];
+      if (allowed.indexOf(id) !== -1) {
+        location.replace("projects/" + id + ".html");
+      } else {
+        location.replace("home.html#projects");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p><a href="home.html#projects">Go to projects</a></p>
+</body>
+</html>

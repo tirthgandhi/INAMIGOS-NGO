@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InAmigos Foundation — Uniting Minds For Change</title>
+  <meta name="description" content="InAmigos Foundation is a Central Government licensed Section 8 NGO working for education, women empowerment, environment, animal welfare, and community service across India.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="assets/images/hero/hands-together.jpg" as="image">
+  <link rel="preload" href="assets/logos/inamigos-logo.svg" as="image">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" as="style">
+  <link rel="preload" href="css/website.css" as="style">
+  <link rel="preload" href="css/website-sections.css" as="style">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/website.css">
+  <link rel="stylesheet" href="css/projects-cards.css">
+  <link rel="stylesheet" href="css/website-sections.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/project-page.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    /* Critical CSS - Above the fold */
+    #page-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b1120;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    
+    #page-loader.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .loader-content {
+      text-align: center;
+      color: #f8fafc;
+    }
+    
+    .loader-logo {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    
+    .loader-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+    
+    .loader-spinner {
+      width: 32px;
+      height: 32px;
+      border: 2px solid rgba(212, 163, 115, 0.3);
+      border-top: 2px solid #d4a373;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body class="page-website">
+  <!-- Page Loader -->
+  <div id="page-loader">
+    <div class="loader-content">
+      <img src="assets/logos/inamigos-logo.svg" alt="InAmigos Foundation" class="loader-logo" onerror="this.style.display='none'">
+      <div class="loader-text">InAmigos Foundation</div>
+      <div class="loader-text" style="font-size: 0.8rem; margin-bottom: 2rem;">Loading...</div>
+      <div class="loader-spinner"></div>
+    </div>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="InAmigos Foundation">
+        <img src="assets/logos/inamigos-logo.svg" alt="" width="36" height="36" class="brand-mark" onerror="this.remove()">
+        <span class="brand-name">InAmigos <span>Foundation</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-desktop">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn-donate" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <ul class="nav-mobile" id="nav-mobile">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="impact.html">Impact</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--site site-banner" id="home" aria-label="InAmigos Foundation">
+      <div class="hero-media-wrap" aria-hidden="true">
+        <img src="assets/images/hero/hands-together.jpg" alt="" width="1920" height="1080" 
+             fetchpriority="high" loading="eager"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&amp;fit=crop&amp;w=1920&amp;q=75';">
+      </div>
+      <div class="hero-cinematic-overlay" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-body">
+        <div class="hero-grid">
+          <div class="hero-center">
+            <span class="hero-eyebrow">Uniting Minds For Change</span>
+            <h1 class="hero-title">InAmigos Foundation</h1>
+            <p class="hero-tagline">Every Pin Tells a Story of Impact</p>
+            <p class="hero-support">Licensed by the Central Government · Section 8 NGO · Serving communities across 28 states since 2020.</p>
+            <div class="site-banner__actions">
+              <a class="btn-primary" href="about.html">Explore Our Work</a>
+              <a class="btn-outline" href="projects.html">View Projects</a>
+              <a class="btn-outline" href="contact.html">Join Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--alt" id="about" aria-labelledby="about-heading">
+      <div class="section-inner reveal">
+        <span class="section-label">Who we are</span>
+        <h2 class="section-title" id="about-heading">About InAmigos Foundation</h2>
+        <p class="section-lead">Founded on 23 September 2020 by Mr. Govind Shukla — a Section 8 non-profit licensed by the Central Government, based in Chhattisgarh.</p>
+
+        <p class="about-story">
+          InAmigos Foundation was founded on September 23, 2020, by Mr. Govind Shukla (Founder &amp; CEO). It is a Section 8 registered non-profit organization, licensed by the Central Government, with its base in Chhattisgarh. The foundation holds 80G &amp; 12A certifications, ensuring transparency, accountability, and tax-exempt benefits for donors. We are CSR-1 registered for corporate partnerships, NGO DARPAN registered with NITI Aayog, and hold IAF ISO 9001:2015 certification for quality in operations and service delivery.
+        </p>
+        <p class="about-story">
+          With a strong network of dedicated professionals, volunteers, and corporate partners, we work tirelessly to bring positive change through food distribution, education, women empowerment, animal welfare, environmental sustainability, and social inclusion programs across India. Our social media platforms actively showcase our impact, keeping supporters informed and engaged.
+        </p>
+
+        <div class="about-pillars">
+          <article class="pillar-card">
+            <h3>Our Mission</h3>
+            <p>To mobilize collective action that directs every contribution toward essential causes — nourishing communities, educating children, empowering women, protecting animals, restoring the environment, and building employable youth across India.</p>
+          </article>
+          <article class="pillar-card">
+            <h3>Our Vision</h3>
+            <p>To create a more inclusive, compassionate, and empowered society where every individual has access to dignity, opportunity, and the support needed to thrive.</p>
+          </article>
+          <article class="pillar-card">
+            <h3>Social Impact</h3>
+            <p>We measure success in lives reached — from 50,000+ beneficiaries and 1 lakh+ interns trained to 20,000+ trees planted and daily animal care — turning purpose into measurable community transformation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="section-inner">
+        <div class="reveal">
+          <span class="section-label">Our causes</span>
+          <h2 class="section-title" id="projects-heading">Our Projects</h2>
+          <p class="section-lead">Six flagship programs driving education, service, empowerment, compassion, sustainability, and youth development. Hover to preview details, then click anywhere on the card to open its project page.</p>
+        </div>
+        <div class="projects-grid" id="projects-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section class="section section--alt" id="impact" aria-labelledby="impact-heading">
+      <div class="section-inner reveal" data-counter-section>
+        <span class="section-label">By the numbers</span>
+        <h2 class="section-title" id="impact-heading">Our Impact</h2>
+        <p class="section-lead">Achievements that reflect the dedication of our volunteers, partners, and communities nationwide.</p>
+        <div class="impact-cards-container">
+          <a href="impact.html" class="impact-card reveal" data-delay="0">
+            <div class="impact-card__border"></div>
+            <div class="impact-card__content">
+              <div class="impact-card__number" data-count="50000" data-suffix="+">0</div>
+              <div class="impact-card__title">Lives Impacted</div>
+              <div class="impact-card__description">
+                Individuals positively impacted through education, sustainability, animal welfare, and community service initiatives.
+              </div>
+            </div>
+          </a>
+          
+          <a href="impact.html" class="impact-card reveal" data-delay="0.1">
+            <div class="impact-card__border"></div>
+            <div class="impact-card__content">
+              <div class="impact-card__number" data-count="200" data-suffix="+">0</div>
+              <div class="impact-card__title">Volunteers</div>
+              <div class="impact-card__description">
+                Dedicated volunteers contributing their time and skills across various projects and community initiatives.
+              </div>
+            </div>
+          </a>
+          
+          <a href="impact.html" class="impact-card reveal" data-delay="0.2">
+            <div class="impact-card__border"></div>
+            <div class="impact-card__content">
+              <div class="impact-card__number" data-count="28" data-suffix="">0</div>
+              <div class="impact-card__title">States Reached</div>
+              <div class="impact-card__description">
+                Impact created across India through multiple NGO initiatives and comprehensive outreach programs.
+              </div>
+            </div>
+          </a>
+          
+          <a href="impact.html" class="impact-card reveal" data-delay="0.3">
+            <div class="impact-card__border"></div>
+            <div class="impact-card__content">
+              <div class="impact-card__number" data-count="30000" data-suffix="+">0</div>
+              <div class="impact-card__title">Interns Trained</div>
+              <div class="impact-card__description">
+                Students empowered through Project Vikas internships and comprehensive skill development programs.
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="impact-highlight reveal">
+          <p>At InAmigos Foundation, we believe in the power of collective action. Every contribution supports food distribution, education, women empowerment, animal welfare, environmental sustainability, and social inclusion — building a society where compassion and opportunity reach every corner of India.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVID Relief -->
+    <section class="section" id="relief" aria-labelledby="relief-heading">
+      <div class="section-inner reveal">
+        <span class="section-label">Community resilience</span>
+        <h2 class="section-title" id="relief-heading">COVID-19 Relief Work</h2>
+        <p class="section-lead">During the pandemic, InAmigos Foundation stood with communities when they needed us most.</p>
+        <div class="relief-grid">
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Distributed food to 1,500+ people during COVID lockdowns.</p></div>
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Distributed stationery to students in Kolkata.</p></div>
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Distributed clothes across Chhattisgarh.</p></div>
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Distributed masks and sanitizers in rural areas.</p></div>
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Fed street animals during the pandemic.</p></div>
+          <div class="relief-item"><span class="relief-item__year">2020</span><p>Visited orphanages to check on elderly residents.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="section section--alt" id="stories" aria-labelledby="stories-heading">
+      <div class="section-inner">
+        <div class="reveal">
+          <span class="section-label">Human stories</span>
+          <h2 class="section-title" id="stories-heading">Success Stories</h2>
+          <p class="section-lead">Real narratives of transformation through InAmigos Foundation programs.</p>
+        </div>
+        <div class="stories-grid">
+          <a href="stories.html#bachpanshala" class="story-card reveal" data-delay="0">
+            <div class="story-card__content">
+              <h3 class="story-title">Education Opens Doors</h3>
+              <span class="story-project">Project Bachpanshala</span>
+              <p class="story-summary">A child who could not attend school now receives educational support and guidance.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+
+          <a href="stories.html#seva" class="story-card reveal" data-delay="0.1">
+            <div class="story-card__content">
+              <h3 class="story-title">Meals That Restored Dignity</h3>
+              <span class="story-project">Project Seva</span>
+              <p class="story-summary">Families received nutritious meals and essential supplies during challenging times.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+
+          <a href="stories.html#udaan" class="story-card reveal" data-delay="0.2">
+            <div class="story-card__content">
+              <h3 class="story-title">Digital Skills, Independent Futures</h3>
+              <span class="story-project">Project Udaan</span>
+              <p class="story-summary">Women learned online business skills and gained financial independence.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+
+          <a href="stories.html#prakriti" class="story-card reveal" data-delay="0.3">
+            <div class="story-card__content">
+              <h3 class="story-title">From Wasteland to Green Community</h3>
+              <span class="story-project">Project Prakriti</span>
+              <p class="story-summary">Tree plantation initiatives transformed villages into green communities.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+
+          <a href="stories.html#jeev" class="story-card reveal" data-delay="0.4">
+            <div class="story-card__content">
+              <h3 class="story-title">Compassion for Every Life</h3>
+              <span class="story-project">Project Jeev</span>
+              <p class="story-summary">Daily care and feeding programs for street animals create lasting impact.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+
+          <a href="stories.html#vikas" class="story-card reveal" data-delay="0.5">
+            <div class="story-card__content">
+              <h3 class="story-title">Internship to Employment</h3>
+              <span class="story-project">Project Vikas</span>
+              <p class="story-summary">Interns gained experience and mentorship leading to permanent employment.</p>
+              <span class="story-read-more">Read More →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="section-inner reveal">
+        <span class="section-label">In the field</span>
+        <h2 class="section-title" id="gallery-heading">Our Gallery</h2>
+        <p class="section-lead">Featured project highlights showcasing our impact across India.</p>
+        <div class="gallery-grid gallery-grid--featured" id="gallery-featured" aria-label="Featured project covers"></div>
+      </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section class="section section--alt" id="get-involved" aria-labelledby="involved-heading">
+      <div class="section-inner">
+        <div class="reveal">
+          <span class="section-label">Join the movement</span>
+          <h2 class="section-title" id="involved-heading">Get Involved</h2>
+          <p class="section-lead">Step in, stand out, and create impact with InAmigos Foundation.</p>
+        </div>
+
+        <div class="involvement-grid">
+          <article class="involvement-card reveal">
+            <h3>Donate</h3>
+            <p>Make a difference with your donation today. Your support funds food distribution, education, women empowerment, animal welfare, and environmental programs across India. Donations qualify for tax benefits under 80G &amp; 12A.</p>
+            <a class="btn-primary" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate Now</a>
+          </article>
+          <article class="involvement-card reveal">
+            <h3>Become a Volunteer</h3>
+            <p>Join us and be the change you wish to see. Field volunteers, community managers, and social workers collaborate with our team to deliver programs that reach the last mile.</p>
+            <a class="btn-primary" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Volunteer Now</a>
+          </article>
+          <article class="involvement-card reveal">
+            <h3>Join Our Team</h3>
+            <p>Over 250 interns have joined InAmigos Foundation permanently. Explore internship and associate roles that build your career while serving society.</p>
+            <a class="btn-primary" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Join Us</a>
+          </article>
+        </div>
+
+        <div class="reveal">
+          <h3 class="section-title" style="font-size:1.35rem;margin-bottom:0.75rem">Internship Opportunities</h3>
+          <p class="section-lead" style="margin-bottom:0">InAmigos Foundation recruits volunteers for 1–3 month internship programs across multiple domains.</p>
+          <div class="internship-roles">
+            <span class="internship-role">Field Volunteer</span>
+            <span class="internship-role">Community Management</span>
+            <span class="internship-role">Fundraising Volunteer</span>
+            <span class="internship-role">Graphic Design</span>
+            <span class="internship-role">Social Entrepreneurship</span>
+            <span class="internship-role">Social Work Volunteer</span>
+            <span class="internship-role">Content Writing</span>
+            <span class="internship-role">Community Teacher</span>
+          </div>
+          <h4 style="font-family:Poppins,sans-serif;font-size:0.95rem;color:var(--accent-gold);margin-bottom:0.75rem">Certificate Benefits</h4>
+          <ul class="certificate-benefits">
+            <li>Industry recognition — CSR-1, ISO-certified, Central Govt licensed NGO</li>
+            <li>Global acceptance by institutions worldwide</li>
+            <li>Opens doors in NGOs, CSR projects, and social enterprises</li>
+            <li>Advantage in CSR department hiring</li>
+            <li>Strengthens resume and interview performance</li>
+            <li>Career credibility from a prestigious certified NGO</li>
+            <li>Reflects dedication and social responsibility</li>
+          </ul>
+          <div class="cta-actions" style="margin-top:1.5rem">
+            <a class="btn-primary" href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Apply for Internship</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner reveal">
+        <span class="section-label">Reach us</span>
+        <h2 class="section-title" id="contact-heading">Contact</h2>
+        <p class="section-lead">Connect with InAmigos Foundation for partnerships, volunteering, media inquiries, or general questions.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <ul class="contact-list">
+              <li>
+                <strong>Email</strong>
+                <a href="mailto:info@inamigosfoundation.org.in">info@inamigosfoundation.org.in</a>
+              </li>
+              <li>
+                <strong>Website</strong>
+                <a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">inamigosfoundation.org.in</a>
+              </li>
+              <li>
+                <strong>Registered Office</strong>
+                Bilaspur, Chhattisgarh, India — 495555
+              </li>
+              <li>
+                <strong>Founder &amp; CEO</strong>
+                Govind Shukla
+              </li>
+            </ul>
+          </div>
+          <div class="contact-card">
+            <h3>Connect With Us</h3>
+            <div class="social-connect">
+              <a href="https://www.facebook.com/InAmigos/" target="_blank" rel="noopener noreferrer">Facebook</a>
+              <a href="https://www.instagram.com/inamigos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <a href="https://twitter.com/InAmigosF" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+              <a href="https://www.linkedin.com/company/inamigos-foundation" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://youtube.com/@inamigosfoundation" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Official Website</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">InAmigos <span>Foundation</span></span>
+        <p style="color:var(--accent-gold);font-size:0.85rem;margin-top:0.35rem">Uniting Minds For Change</p>
+        <p>Section 8 NGO licensed by the Central Government. Creating lasting impact across India since 2020.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/InAmigos/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+          <a href="https://twitter.com/InAmigosF" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+          <a href="https://www.instagram.com/inamigos/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/company/inamigos-foundation" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+        <p class="footer-legal">CIN: U85300CT2020NPL010641 · PAN: AAFCI8183C<br>Bilaspur, Chhattisgarh, India — 495555</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="impact.html">Impact</a></li>
+          <li><a href="stories.html">Stories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Projects</h4>
+        <ul>
+          <li><a href="projects/seva.html">Project Seva</a></li>
+          <li><a href="projects/bachpanshala.html">Project Bachpanshala</a></li>
+          <li><a href="projects/jeev.html">Project Jeev</a></li>
+          <li><a href="projects/udaan.html">Project Udaan</a></li>
+          <li><a href="projects/prakriti.html">Project Prakriti</a></li>
+          <li><a href="projects/vikas.html">Project Vikas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Donate</a></li>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Volunteer</a></li>
+          <li><a href="https://inamigosfoundation.org.in/" target="_blank" rel="noopener noreferrer">Internships</a></li>
+          <li><a href="mailto:info@inamigosfoundation.org.in">info@inamigosfoundation.org.in</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 InAmigos Foundation. All Rights Reserved. · Developed with purpose for social impact.</p>
+    </div>
+  </footer>
+
+  <script src="js/counters.js" defer></script>
+  <script src="js/animations.js" defer></script>
+  <script src="js/project-images.js" defer></script>
+  <script src="js/website.js" defer></script>
+  
+  <script>
+    // Page loader functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const loader = document.getElementById('page-loader');
+      const heroImage = document.querySelector('.hero-media-wrap img');
+      let imagesLoaded = 0;
+      let imagesToLoad = 1; // Hero image
+      
+      function checkAllLoaded() {
+        imagesLoaded++;
+        if (imagesLoaded >= imagesToLoad && document.readyState === 'complete') {
+          setTimeout(() => {
+            if (loader) {
+              loader.classList.add('fade-out');
+              setTimeout(() => {
+                loader.style.display = 'none';
+              }, 500);
+            }
+          }, 300); // Small delay to ensure smooth experience
+        }
+      }
+      
+      // Check if hero image is already loaded
+      if (heroImage) {
+        if (heroImage.complete) {
+          checkAllLoaded();
+        } else {
+          heroImage.addEventListener('load', checkAllLoaded);
+          heroImage.addEventListener('error', checkAllLoaded);
+        }
+      }
+      
+      // Fallback: hide loader after 3 seconds regardless
+      setTimeout(() => {
+        if (loader && !loader.classList.contains('fade-out')) {
+          loader.classList.add('fade-out');
+          setTimeout(() => {
+            loader.style.display = 'none';
+          }, 500);
+        }
+      }, 3000);
+      
+      // Also check document ready state
+      if (document.readyState === 'complete') {
+        checkAllLoaded();
+      } else {
+        window.addEventListener('load', checkAllLoaded);
+      }
+    });
+  </script>
+</body>
+</html>
