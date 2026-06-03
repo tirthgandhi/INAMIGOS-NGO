@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # InAmigos Foundation Website
 ### Every Pin Tells a Story of Impact
 
@@ -429,3 +430,7 @@ This website was developed with passion to showcase the incredible work of InAmi
 *Discover how InAmigos Foundation is transforming communities across India, one project at a time.*
 
 [**🚀 Explore the Website**](./index.html) | [**💝 Donate Now**](https://inamigosfoundation.org.in/) | [**🤝 Volunteer**](https://inamigosfoundation.org.in/)
+=======
+# INAMIGOS-NGO
+Interactive NGO awareness website for InAmigos Foundation showcasing projects, impact stories, galleries, and community initiatives across India.
+>>>>>>> b51a4eb7e0e867748e8ccdd86be959c1a2be46eb
