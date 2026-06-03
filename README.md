@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # InAmigos Foundation Website
 ### Every Pin Tells a Story of Impact
 
